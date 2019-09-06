@@ -1,27 +1,24 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.5'
+ruby '2.6.3'
 gem 'jinda'
-gem 'react-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
+# Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -37,21 +34,19 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git', branch: 'master'
 gem 'maruku', '~> 0.7.3'
 gem 'rouge'
 gem 'normalize-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'mongoid-paperclip', require: 'mongoid_paperclip'
+# gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'meta-tags'
 gem 'jquery-turbolinks'
-gem 'mongo', '~> 2.2'
+gem 'mongo', '>= 2.5.1'
 gem 'bson', '~> 4.0'
-gem 'mongoid', '6.1.0'
 gem 'nokogiri'
 gem 'haml', git: 'https://github.com/haml/haml'
 gem 'haml-rails'
@@ -59,6 +54,7 @@ gem 'mail'
 gem 'prawn'
 gem 'redcarpet'
 gem 'bcrypt'
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-identity'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
@@ -66,6 +62,8 @@ gem 'dotenv-rails'
 gem 'cloudinary'
 gem 'kaminari'
 gem 'kaminari-mongoid'
+# gem 'will_paginate'
+# gem 'will_paginate_mongoid'
 gem 'jquery-rails'
 group :development, :test do
   gem 'rspec'
